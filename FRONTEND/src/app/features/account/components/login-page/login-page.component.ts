@@ -15,11 +15,11 @@ export class LoginPageComponent {
 
   login() {
     this.authService.login(this.username, this.password).subscribe(
-      res => {
+      (res: any) => {
         localStorage.setItem('token', res.token);
         this.router.navigate(['/']);
       },
-      err => {
+      (err: any) => {
         console.error(err);
       }
     );

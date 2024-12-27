@@ -19,7 +19,11 @@ export class ProductService {
    * @returns Un Observable qui émet un tableau d'objets "Product".
    */
   public getAllProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>('assets/mock/products.json').pipe(
+    // return this.http.get<Product[]>('assets/mock/products.json').pipe(
+    //   tap(products => this.productSubject.next(products))
+    // );
+
+    return this.http.get<Product[]>(`${environment.backendCatalogue}`).pipe(
       tap(products => this.productSubject.next(products))
     );
   }
