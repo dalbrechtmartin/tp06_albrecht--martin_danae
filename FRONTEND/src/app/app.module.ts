@@ -12,6 +12,9 @@ import { routes } from './app.routes';
 import { ProductService } from './core/services/product.service';
 import { CartState } from './features/cart/states/cart.state';
 
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,10 @@ import { CartState } from './features/cart/states/cart.state';
     RouterModule.forRoot(routes),
     NgxsModule.forRoot([CartState]),
   ],
-  providers: [ProductService],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

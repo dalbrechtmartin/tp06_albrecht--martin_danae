@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 import { AccountPageComponent } from './components/account-page/account-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
-import { RouterModule, Routes } from '@angular/router';
+
 
 const routes: Routes = [
   {
@@ -18,11 +20,13 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    AccountPageComponent,
+  declarations: [
     LoginPageComponent,
+  ],
+  imports: [
+    AccountPageComponent,
+    CommonModule,
+    FormsModule,
     RouterModule.forChild(routes)
   ]
 })
