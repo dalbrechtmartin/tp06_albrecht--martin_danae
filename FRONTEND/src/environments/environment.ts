@@ -25,6 +25,6 @@ export const environment = {
     // backendUpdateClient: 'http://localhost:443/api/utilisateur/update',
 
     // ONLINE
-    backendLoginClient: 'http://cnamapp-8h04.onrender.com/api/utilisateur/login',
-    backendCatalogue: 'http://cnamapp-8h04.onrender.com/api/catalogue',
+    backendLoginClient: 'https://cnamapp-8h04.onrender.com/api/utilisateur/login',
+    backendCatalogue: 'https://cnamapp-8h04.onrender.com/api/catalogue',
   };
