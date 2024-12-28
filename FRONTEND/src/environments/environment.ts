@@ -14,9 +14,17 @@
 
 export const environment = {
     production: false,
+    // WITHOUT API
     // backendClient: '/assets/mock/products.json',
-    backendLoginClient: 'http://localhost:443/api/utilisateur/login',
+
+    // WITH API
+    // LOCAL
+    // backendLoginClient: 'http://localhost:443/api/utilisateur/login',
+    // backendCatalogue: 'http://localhost:443/api/catalogue',
     // backendRegisterClient: 'http://localhost:443/api/utilisateur/register',
     // backendUpdateClient: 'http://localhost:443/api/utilisateur/update',
-    backendCatalogue: 'http://localhost:443/api/catalogue'
+
+    // ONLINE
+    backendLoginClient: 'http://cnamapp-8h04.onrender.com/api/utilisateur/login',
+    backendCatalogue: 'http://cnamapp-8h04.onrender.com/api/catalogue',
   };
