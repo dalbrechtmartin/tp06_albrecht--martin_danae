@@ -1,13 +1,5 @@
 exports.get = (req, res) => {
     const catalogue = [
-		{
-			"shape": "Écho",
-			"categorie": "Dildo",
-			"name": "Occulte",
-			"description": "Mou et confortable. Les textures sont adoucies, offrant une pénétration souple qui épouse les shapes du corps.",
-			"price": 95,
-			"image": "https://fera-daemon.com/cdn/shop/files/Fera_daemon_halloween_dildo_crystal_gode_toys_4_1400x.jpg?v=1729361881"
-		},
         {
 			shape: "Écho",
 			categorie: "Dildo",

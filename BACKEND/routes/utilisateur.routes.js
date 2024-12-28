@@ -7,5 +7,14 @@ module.exports = app => {
   // login utilisateur
   router.post("/login", utilisateur.login);
 
+  // create utilisateur
+  router.post("/", utilisateur.createUser);
+
+  // update utilisateur
+  router.put("/:id", utilisateur.updateUser);
+
+  // delete utilisateur
+  router.delete("/:id", utilisateur.deleteUser);
+
   app.use('/api/utilisateur', router);
 };
